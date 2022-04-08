@@ -1,0 +1,46 @@
+.basic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #55626E;
+    border-radius: 15px;
+    padding: 1rem 2rem 0rem 1rem; 
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    word-break: break-all;
+    width: 10rem;
+    color: #FFFFFF;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    color: #FFFFFF;
+}
+.name {
+    color:#B2B3B5
+}
+.light {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.red {
+    background-color: red;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+.green {
+    background-color: #00A341;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+.siteId{
+    color: #B2B3B5;
+}

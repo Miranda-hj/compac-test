@@ -1,18 +1,16 @@
 .basic {
-    margin:2rem;
+    padding: 3rem 2.5rem;
+    background-color: #2C3742;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    text-align: center;
 }
-th {
-    width: 4rem;
+.title {
+    color: #FFFFFF;
+    letter-spacing: 1px;
 }
-.header {
-    border: 1px solid black;
-    background-color: black;
-    color:white;
-}
-.content {
-    background-color: lightgray;
+.total {
+    color: #FFFFFF;
+    display:flex;
+    flex-direction: row;
 }

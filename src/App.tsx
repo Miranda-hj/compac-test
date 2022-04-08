@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import styles from "./App.module.scss";
-import { Table } from "./components/Table";
+import { useForm } from "react-hook-form";
+import { Panel } from "./components/panel/panel";
+import { Arrow } from "./components/icon/arrow/Arrow";
 
 export default function App() {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState<any[]>([]);
   useEffect(() => {
     fetch(
       "https://func-co-terminalservice-dev.azurewebsites.net/api/terminals?code=OTvy9V8paWOTtbs8dEKgSjFaPdnOya74lIHIEwBRU2ao0RHPmkVTKQ==",
@@ -12,49 +13,22 @@ export default function App() {
       .then((response) => response.json())
       .then((data) => setList(data));
   }, []);
-  console.log(list);
   return (
     <div className={styles.basic}>
-      <table>
-        <tr className={styles.header}>
-          <th>id</th>
-          <th>customerId</th>
-          <th>siteId</th>
-          <th>registrationId</th>
-          <th>name</th>
-          <th>description</th>
-          <th>hardware variant</th>
-          <th>authorisation mode</th>
-          <th>authorisation timeout</th>
-          <th>authorisation flags</th>
-          <th>payment gateway address</th>
-          <th>currency</th>
-          <th>printer type</th>
-          <th>passcode</th>
-        </tr>
-
-        {list.map((data, i) => (
-          <tr className={styles.content}>
-            <Table
-              key={i}
-              id={data.id}
-              customerId={data.customerId}
-              siteId={data.siteId}
-              registrationId={data.registrationId}
-              name={data.name}
-              description={data.description}
-              hardwareVariant={data.hardwareVariant}
-              authorisationMode={data.authorisationMode}
-              authorisationTimeout={data.authorisationTimeout}
-              authorisationFlags={data.authorisationFlags}
-              paymentGatewayAddress={data.paymentGatewayAddress}
-              currency={data.currency}
-              printerType={data.printerType}
-              passcode={data.passcode}
-            />
-          </tr>
-        ))}
-      </table>
+      <h2 className={styles.title}>Your sites</h2>
+      <div className={styles.total}>
+        <h2>()</h2>
+      </div>
+      <Arrow />
+      {list.map((data, i) => (
+        <Panel
+          siteId={data.siteId}
+          name={data.name}
+          description={data.description}
+          hardwareVariant={data.hardwareVariant}
+          authorisationMode={data.authorisationMode}
+        />
+      ))}
     </div>
   );
 }
