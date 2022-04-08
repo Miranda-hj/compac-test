@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Create.module.scss";
 import { useForm } from "react-hook-form";
-export const Create = (props: { onClick?: () => void }) => {
+export const Create = () => {
   const [active, setActive] = useState(false);
   const { register, handleSubmit, reset } = useForm();
   const newData = async () => {

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { StartIcon } from "../icon/start/Start";
 import styles from "./panel.module.scss";
 

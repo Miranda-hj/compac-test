@@ -1,6 +1,5 @@
 .basic {
     padding: 3rem 2.5rem;
-    background-color: #15202a;
 }
 .title {
     color: #FFFFFF;
@@ -14,7 +13,9 @@
     color: #FFFFFF;
     display:flex;
     flex-direction: row;
-    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    padding-right: 2rem;
     align-items: center;
     gap:1rem;
 }
@@ -22,5 +23,7 @@
     background-color: #15202a;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+}
+.panel {
+    padding-top: 3rem;
 }
