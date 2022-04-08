@@ -22,6 +22,7 @@ export default function App() {
           <th>siteId</th>
           <th>registrationId</th>
           <th>name</th>
+          <th>description</th>
           <th>hardware variant</th>
           <th>authorisation mode</th>
           <th>authorisation timeout</th>

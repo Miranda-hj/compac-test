@@ -1,5 +1,3 @@
-import styles from "./Table.module.scss";
-
 export const Table = (
   props: JSX.IntrinsicElements["input"] & {
     id?: string;
@@ -24,6 +22,7 @@ export const Table = (
       <td>{props.customerId}</td>
       <td>{props.siteId}</td>
       <td>{props.registrationId}</td>
+      <td>{props.description}</td>
       <td>{props.name}</td>
       <td>{props.hardwareVariant}</td>
       <td>{props.authorisationMode}</td>
