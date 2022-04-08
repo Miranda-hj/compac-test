@@ -1,0 +1,10 @@
+.basic {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+td {
+    padding-left:3rem;
+    word-break: break-all;
+    width: 4rem;
+}
